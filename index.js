@@ -1,7 +1,10 @@
 const express = require('express')
 const sharp = require('sharp')
+const cors = require('cors')
 const app = express()
 const port = 3000
+
+app.use(cors())
 
 app.get('/:size', (req, res) => {
   const type = Object.keys(req.query)[0]
